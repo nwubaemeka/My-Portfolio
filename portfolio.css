@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #7c88a2 50%, #FFFFFF 50%);
+  font-family: 'Lora', serif;
+  font-weight: 500;
+}
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+}
+#nickname{
+  width: 50%;
+  position: relative;
+  left: 80px;
+}
+#nickname p{
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: 'Lobster', cursive;
+}
+#circle{
+  z-index: -1;
+  width: 2.5rem;
+  height: 2.5rem;
+  /*background-image: linear-gradient(to right, #F54B64, #F78361);*/
+  background-color: black;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.75rem;
+  left: -0.938rem;
+}
+#specifics{
+  width: 50%;
+  position: relative;
+  right: 40px;
+}
+#specifics ul{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+}
