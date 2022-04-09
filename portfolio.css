@@ -1,45 +1,113 @@
 body{
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to right, #7c88a2 50%, #FFFFFF 50%);
+  background-image: linear-gradient(to right, #d2d6df 50%, #FFFFFF 50%);
   font-family: 'Lora', serif;
   font-weight: 500;
+  position: relative;
 }
 header{
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: absolute;
+  position: fixed;
 }
 #nickname{
-  width: 50%;
+  width: 40%;
   position: relative;
-  left: 80px;
+  left: 60px;
 }
 #nickname p{
   font-size: 20px;
   color: #FFFFFF;
   font-family: 'Lobster', cursive;
 }
-#circle{
-  z-index: -1;
-  width: 2.5rem;
-  height: 2.5rem;
-  /*background-image: linear-gradient(to right, #F54B64, #F78361);*/
-  background-color: black;
-  display: inline-block;
-  border-radius: 50%;
-  position: absolute;
-  top: 0.75rem;
-  left: -0.938rem;
+#code{
+  color: black;
+}
+#circle {
+    z-index: -1;
+    background-color: #3e64ff;
+    float: left;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 0.75rem;
+    left: -0.938rem;
+    shape-outside: circle();
+    clip-path: circle();
+    animation-name: grow;
+    animation-duration: 1s;
+}
+@keyframes grow {
+  0% {width: 1rem;}
+  100% {width: 2.5rem;}
 }
 #specifics{
-  width: 50%;
+  z-index: 1;
+  width: 60%;
   position: relative;
-  right: 40px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #specifics ul{
+   width: 100%;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    list-style: none;
+
+}
+#specifics ul a{
+  text-decoration: none;
+  color: black;
+}
+#specifics ul a:hover{
+  text-decoration: underline;
+}
+.main{
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 40px;
+}
+.main h1 h3{
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+}
+#hey{
+  color: #3e64ff;
+}
+.main h1{
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 40px;
+  color: #010b13;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.main h2{
+  overflow: hidden;
+  width: 56px;
+  border-right: 2px solid #3e64ff;
+  animation: typing 4s forwards;
+  white-space: nowrap;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+#job{
+  color: #3e64ff;
+}
+.type{
+  display: inline-block;
+  align-items: center;
+  height: 50px;
 }
