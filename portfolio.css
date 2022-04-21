@@ -1,26 +1,42 @@
 body{
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to right, #d2d6df 50%, #FFFFFF 50%);
+  align-items: center;
   font-family: 'Lora', serif;
   font-weight: 500;
   position: relative;
+  flex-flow: column;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.25rem;
+}
+.body{
+  padding: 0;
+  z-index: 2;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  background-image: linear-gradient(to right, #d2d6df 50%, #FFFFFF 50%);
 }
 header{
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: fixed;
+  position: absolute;
 }
 #nickname{
   width: 40%;
   position: relative;
-  left: 60px;
+  left: 3.75rem;
 }
 #nickname p{
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #FFFFFF;
   font-family: 'Lobster', cursive;
+  z-index: 5;
 }
 #code{
   color: black;
@@ -34,7 +50,7 @@ header{
     display: inline-block;
     position: absolute;
     top: 0.75rem;
-    left: -0.938rem;
+    left: -0.8rem;
     shape-outside: circle();
     clip-path: circle();
     animation-name: grow;
@@ -44,38 +60,38 @@ header{
   0% {width: 1rem;}
   100% {width: 2.5rem;}
 }
-#specifics{
+.specifics{
   z-index: 1;
   width: 60%;
   position: relative;
-  right: 20px;
+  right: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#specifics ul{
+.specifics ul{
    width: 100%;
    display: flex;
    justify-content: space-between;
    list-style: none;
 
 }
-#specifics ul a{
+.specifics ul a{
   text-decoration: none;
   color: black;
 }
-#specifics ul a:hover{
+.specifics ul a:hover{
   text-decoration: underline;
 }
 .main{
   position: relative;
-  height: 500px;
+  height: 31.25rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 40px;
+  top: 2.5rem;
 }
 .main h1 h3{
   display: flex;
@@ -84,17 +100,19 @@ header{
 }
 #hey{
   color: #3e64ff;
+  text-shadow: 1px 1px #3e64ff;
 }
 .main h1{
   font-family: 'Rubik Mono One', sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #010b13;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+  text-shadow: 2px 2px #585858;
 }
 .main h2{
   overflow: hidden;
-  width: 56px;
+  width: 3.5rem;
   border-right: 2px solid #3e64ff;
   animation: typing 4s forwards;
   white-space: nowrap;
@@ -105,9 +123,144 @@ header{
 }
 #job{
   color: #3e64ff;
+  text-shadow: 1px 1px #3e64ff;
 }
 .type{
   display: inline-block;
   align-items: center;
-  height: 50px;
+  height: 3.125rem;
+}
+.socialmedia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ;
+}
+.smicons{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  flex-flow: row;
+  list-style: none;
+  background-image: linear-gradient(to top, lightblue, white);
+  border-radius: 5px;
+}
+.icons{
+  width: 1.562rem;
+  height: 1.562rem;
+  padding: 0.1875rem;
+}
+.about{
+  width: 70%;
+  height: 31.25rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  position: relative;
+  top: 1.875rem;
+  border-radius: 1.875rem;
+  margin-bottom: 1.875rem;
+  box-shadow: 4px 4px 8px grey;
+  border-style: none;
+}
+.about article{
+  width: 50%;
+}
+#picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+}
+.myabout{
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+
+  padding: 0.625rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  font-family: 'Lalezar', cursive;
+}
+.myabout h2{
+  color: #3e64ff;
+  text-shadow: 1px 1px 2px black;
+}
+.myabout p{
+  color: white;
+  text-shadow: 0.5px 0.5px 2px black;
+}
+.myabout p b{
+  color: black;
+}
+button{
+  background-color: #3e64ff;
+  color: white;
+  width: 6.25rem;
+  height: 1.875rem;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 0.3px 0.3px 3px white;
+}
+button a{
+  text-decoration: none;
+  color: white;
+}
+.togglebutton{
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.bar{
+  height: 3px;
+  width: 100%;
+  background-color: #3e64ff;
+  border-radius: 10px;
+  z-index: 10;
+  display: block;
+}
+@media (max-width: 600px) {
+  .togglebutton{
+    display: flex;
+  }
+  .specifics{
+    display: none;
+    width: 100%;
+  }
+  .specifics.active{
+    display: flex;
+  }
+  header{
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: grey;
+  }
+  .specifics ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  #nickname{
+    left: 1.5rem
+  }
+  .specifics li{
+    text-align: center;
+    padding: 10px
+  }
+  #nickname p{
+    z-index: 2;
+  }
+  body{
+    z-index: -2;
+  }
+  #circle{
+    z-index: ;
+  }
 }

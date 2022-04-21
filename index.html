@@ -2,31 +2,77 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Lobster&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" charset="utf-8"></script>
     <title>Web Development</title>
   </head>
   <body>
-    <header>
-      <section id="nickname">
+    <section class="body">
+     <header>
+      <article id="nickname">
         <p>Iso<span id="code">CODE!</span></p>
         <span id="circle"></span>
-      </section>
-      <section id="specifics">
+      </article>
+      <a class="togglebutton" href="#">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <article class="specifics">
         <ul>
           <li><a href="#">Home</a> </li>
           <li><a href="#">Projects</a> </li>
           <li><a href="#">Resume</a> </li>
           <li><a href="#">Contact</a> </li>
         </ul>
-      </section>
-    </header>
-    <section class="main">
+      </article>
+     </header>
+    <article class="main">
       <h3 id="hey">HEY! I AM</h3>
       <h1>NWUBA CHUKWUEMEKA</h1>
       <div class="type">
         <h2>I'm a <span id="job">Frontend Developer.</span></h2>
       </div>
+      <div class="socialmedia">
+        <ul class="smicons">
+          <li><a href="https://github.com/nwubaemeka"> <img class="icons" src="github.png" alt="github"> </a> </li>
+          <li><a href="https://www.linkedin.com/in/chukwuemeka-nwuba-599a481ab?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7jL1Us1DRzCIUXJeMMwN9A%3D%3D"> <img class="icons"src="linkedin.png" alt=""> </a> </li>
+          <li><a href="mailto:strindlei@gmail.com"> <img class="icons" src="gmail.png" alt="gmail"> </a></li>
+        </ul>
+      </div>
+    </article>
     </section>
+    <section class="about">
+      <article>
+          <img id="picture"src="img6.png" alt="web developer">
+      </article>
+      <article class="myabout">
+           <h2>About Me</h2>
+          <p>My name is Nwuba Chukwuemeka. I am a freelance Website Developer and a Medical Student
+             who specializes in creating dynamic, beautiful and mobile responsive
+             websites. I use HTML, CSS and JAVASCRIPT to create landing pages, static web pages and
+             interactive web pages.
+           </p>
+           <p> Do you want to have that perfect website?
+             I can make it happen.
+           </p>
+           <button type="button" name="button"><a href="mailto:strindlei@gmail.com">CONTACT ME</a></button>
+        <!--<div class="aboutdetails">
+           <p><b>Name</b>: Nwuba Chukwuemeka</p>
+           <p><b>Field</b>: Website Development, SEO, Frontend Development, Medical Student.</p>
+           <p><b>Skills</b>: HTML, CSS, JAVASCRIPT</p>
+           <p><b>What I can create</b>: Landing Pages, Interactive Websites, Mobile Responsive Websites</p>
+        </div> -->
+      </article>
+    </section>
+    <script type="text/javascript">
+      const toggleBButton = document.getElementsByClassName('togglebutton')[0];
+      const specifics = document.getElementsByClassName('specifics')[0];
+
+      toggleBButton.addEventListener('click', () => {
+        specifics.classList.toggle('active')
+    })
+    </script>
   </body>
 </html>
