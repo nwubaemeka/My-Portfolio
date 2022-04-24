@@ -286,7 +286,7 @@ button a{
   }
   .about article img{
     border-radius: 50%;
-    padding-top: 20px
+    padding-top: 1.25rem;
   }
   .header{
     z-index: -1;
