@@ -244,7 +244,7 @@ button a{
   header{
     flex-direction: column;
     align-items: flex-start;
-    background-color: grey;
+    background-color: lightblue;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
@@ -257,16 +257,17 @@ button a{
   }
   .specifics li{
     text-align: center;
-    padding: 10px
+    padding: 10px;
   }
-  #nickname p{
+  .specifics li a{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  #nickname {
     z-index: 2;
   }
-  body{
-    z-index: -2;
-  }
   #circle{
-    z-index: ;
+    z-index: -1;
   }
   .main{
     top: 7rem;
@@ -276,5 +277,19 @@ button a{
   }
   .about{
     width: 90%;
+    flex-flow: column;
+    align-items: center;
+    height: auto;
   }
+  .about article{
+    width: 90%;
+  }
+  .about article img{
+    border-radius: 50%;
+    padding-top: 20px
+  }
+  .header{
+    z-index: -1;
+  }
+
 }
