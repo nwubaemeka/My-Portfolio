@@ -112,7 +112,7 @@ header{
   color: #010b13;
   margin-top: 0.125rem;
   margin-bottom: 0.125rem;
-  text-shadow: 2px 2px #585858;
+  /*text-shadow: 2px 2px #585858;*/
 }
 .main h2{
   overflow: hidden;
